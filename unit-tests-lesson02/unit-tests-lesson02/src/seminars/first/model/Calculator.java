@@ -6,13 +6,13 @@ public class Calculator {
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-//        int firstOperand = getOperand();
-//        int secondOperand = getOperand();
-//        char operator = getOperator();
-//        int result = calculation(firstOperand, secondOperand, operator);
-//        System.out.println("Operation result is: " + result);
+        int firstOperand = getOperand();
+        int secondOperand = getOperand();
+        char operator = getOperator();
+        int result = calculation(firstOperand, secondOperand, operator);
+        System.out.println("Operation result is: " + result);
 
-//        System.out.println(calculatingDiscount(-100, 25));
+        System.out.println(calculatingDiscount(100, 25));
 
     }
 
@@ -116,4 +116,13 @@ public class Calculator {
         }
         return result;
     }
+    public double computeAreaCircle(double radius) {
+        return Math.PI * radius * radius;
+    }
+
+    public double computeLengthCircle(int r) {
+        return 6.283185307179586 * (double)r;
+    }
+
+
 }

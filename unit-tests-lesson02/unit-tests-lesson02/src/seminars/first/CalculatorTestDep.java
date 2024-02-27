@@ -1,5 +1,7 @@
 package seminars.first;
 
+import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.Test;
 import seminars.first.model.Calculator;
 
 import static org.assertj.core.api.Assertions.*;
@@ -68,5 +70,8 @@ public class CalculatorTestDep {
         assertThat(Calculator.calculatingDiscount(1000, 25)).isEqualTo(750);
         assertThat(Calculator.calculatingDiscount(1000, 100)).isEqualTo(0);
         assertThat(Calculator.calculatingDiscount(1000, 0)).isEqualTo(1000);
+
+
+
     }
 }

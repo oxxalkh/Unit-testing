@@ -1,4 +1,5 @@
 
+import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
@@ -93,6 +94,18 @@ public class CalculatorTest {
                 .describedAs("Input error");
         System.setIn(inputStream);
         System.setOut(null);
+    }
+    @Test
+    void computeAreaCircle() {
+        Calculator calculator = new Calculator();
+        org.junit.jupiter.api.Assertions.assertEquals(314.1592653589793, calculator.computeAreaCircle(10.0), "Should return right circle area");
+    }
+
+    @Test
+    void computeLengthCircle() {
+        Calculator calculator = new Calculator();
+        Assertions.assertThat(calculator.computeLengthCircle(10)).isEqualTo(62.83185307179586);
+        org.junit.jupiter.api.Assertions.assertTrue(Math.abs(62.0 - calculator.computeLengthCircle(10)) < 1.0);
     }
 
 }
